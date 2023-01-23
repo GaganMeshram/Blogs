@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center display-5">Post a Blog</h1>
+      <form id="form">
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="Enter your title"
+          />
+        </div>
+        {{!-- <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+          />
+        </div> --}}
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subject"
+            placeholder="Type your Subject here..."
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Blog</label>
+          <textarea
+            class="form-control"
+            id="blog"
+            placeholder="Type your message here..."
+            rows="3"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+      </form>
+    </div>
+
+
+    <script src="js/blog.js"></script>
+  </body>
+</html>

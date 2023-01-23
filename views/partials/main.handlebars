@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    {{>navbar}}
+    {{!-- {{>banner}} --}}
+    <div class="container head-cont">
+      <h2 class="headline">Most Popular News Blogs on the Internet</h2>
+      <p class="subheadline">By John Updated on {{date}} Reviewed by Christine</p>
+      <p class="para">Blogging may be a fun hobby for Tumblr teens or WordPress
+        writers, but it certainly isn't limited to personal pastimes. Today,
+        blogging is one of the most popular ways to report on newsworthy topics.</p>
+      <p class="para">
+        The most popular news blogs on the internet today have countless numbers
+        of pages and receive millions of visits per month from people around the
+        world. Have a look through a handful of the top blogs below and consider
+        adding them to your favorite
+        <a
+          href="https://www.lifewire.com/top-free-online-rss-readers-3486649"
+          target="_blank"
+          rel="noopener noreferrer"
+        >news reader</a>
+        to keep up with breaking news topics that interest you.</p>
+    </div>
+    {{! <div class="container">
+      <p class="para">Blogging may be a fun hobby for Tumblr teens or WordPress
+        writers, but it certainly isn't limited to personal pastimes. Today,
+        blogging is one of the most popular ways to report on newsworthy topics.</p>
+      <p class="para">
+        The most popular news blogs on the internet today have countless numbers
+        of pages and receive millions of visits per month from people around the
+        world. Have a look through a handful of the top blogs below and consider
+        adding them to your favorite
+        <a
+          href="https://www.lifewire.com/top-free-online-rss-readers-3486649"
+          target="_blank"
+          rel="noopener noreferrer"
+        >news reader</a>
+        to keep up with breaking news topics that interest you.</p>
+
+    </div> }}
+    <hr />
+    {{! API DATA }}
+    <div class="container my-3">
+      {{#each data}}
+        <div class="my-4">
+          <h1 class="title"># {{this.slug}}</h1>
+          <img
+            class="img-fluid"
+            src={{this.jetpack_featured_media_url}}
+            alt="Blog Image"
+          />
+
+          <p class="para">{{this.primary_category.description}}</p>
+          {{!-- {{#if excerpt}}
+          <p class="para">{{{excerpt.rendered}}}</p>
+          
+          {{/if}} --}}
+          <a class="btn btn-primary" href="blog/{{this.id}}">View Artical</a>
+        </div>
+        <hr />
+      {{/each}}
+
+    </div>
+{{>footer}}
+  </body>
+</html>

@@ -1,0 +1,34 @@
+{{!-- {{>header}} --}}
+
+<body>
+  {{#each resp}}
+    {{#if content}}
+      <div class="container">
+        <h1
+          class="ab-title mx-2 text-center"
+        >{{{this.title.rendered}}}</h1>
+
+        <div class="container">
+          <img
+          class="img-fluid my-5"
+          src={{this.jetpack_featured_media_url}}
+          alt="banner-image"
+        />
+        <p class="container">{{{content.rendered}}}</p>
+        <br />
+        <figcaption class="blockquote-footer text-end">
+          Article by
+          <cite
+            title="Source Title"
+          >{{{this.parselyMeta.parsely-author}}}</cite>
+        </figcaption>
+        </div>
+        
+      </div>
+
+    {{/if}}
+
+  {{/each}}
+
+
+</body>
